@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水树加奈的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 引入字体图标增强美工效果 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- 头部：头像+昵称（美工优化：增加装饰边框） -->
+    <header class="header">
+        <div class="avatar-container">
+            <img src="https://via.placeholder.com/150" alt="水树加奈的头像" class="avatar">
+            <div class="avatar-decoration"></div>
+        </div>
+        <h1 class="name">水树加奈 <i class="fa-solid fa-palette"></i></h1>
+        <p class="motto">热爱生活的创作者 / 手作达人</p>
+    </header>
+
+    <!-- 简介模块（美工优化：增加图标点缀） -->
+    <section class="about">
+        <h2><i class="fa-solid fa-user"></i> 关于我</h2>
+        <p>大家好！我是水树加奈，一名喜欢分享的创作者，擅长画画、手作。</p>
+        <p>乐于探索新鲜事物，追求简单而美好的生活。</p>
+    </section>
+
+    <!-- 技能模块（美工优化：标签hover动效+配色升级） -->
+    <section class="skills">
+        <h2><i class="fa-solid fa-star"></i> 我的技能</h2>
+        <div class="skill-list">
+            <span class="skill-tag"><i class="fa-solid fa-brush"></i> 水彩绘画</span>
+            <span class="skill-tag"><i class="fa-solid fa-hand-sparkles"></i> 黏土手作</span>
+            <span class="skill-tag"><i class="fa-solid fa-scissors"></i> 布艺DIY</span>
+            <span class="skill-tag"><i class="fa-solid fa-pen-ruler"></i> 插画设计</span>
+        </div>
+    </section>
+
+    <!-- 作品集模块（美工优化：图片hover阴影+圆角升级） -->
+    <section class="portfolio">
+        <h2><i class="fa-solid fa-images"></i> 我的作品集</h2>
+        <div class="work-list">
+            <div class="work-item">
+                <img src="https://via.placeholder.com/300x200" alt="作品1" class="work-img">
+            </div>
+            <div class="work-item">
+                <img src="https://via.placeholder.com/300x200" alt="作品2" class="work-img">
+            </div>
+            <div class="work-item">
+                <img src="https://via.placeholder.com/300x200" alt="作品3" class="work-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式（美工优化：图标+文字排版优化） -->
+    <footer class="contact">
+        <h2><i class="fa-solid fa-envelope"></i> 联系我</h2>
+        <div class="contact-list">
+            <p><i class="fa-solid fa-at"></i> 邮箱：1208435157@qq.com</p>
+            <p><i class="fa-brands fa-weixin"></i> 微信：mizuki_kana</p>
+        </div>
+    </footer>
+
+    <!-- 回到顶部按钮（新增美工优化） -->
+    <button class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script>
+        // 回到顶部按钮交互（简单JS不影响核心样式）
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.style.display = 'block';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
